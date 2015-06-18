@@ -1,15 +1,11 @@
 # A dockerized drush
 
-1. Put this in your `~/.profile`:
+Optimized drush container based on debian. This container includes all necessary php modules to work with drush (e.g. the "mcrypt" extension for laravel installation).
+
+### Add drush as alias
+
+Put this in your .profile, .bashrc or .bash_profile:
 
 ```
-alias drush="docker run -i -t -v \$PWD:/srv cbeier/drush"
+alias drush="docker run --rm -i -t -v \$PWD:/srv cbeier/drush"
 ```
-
-2. ???
-3. Enjoy `composer` on your php-less system.
-
-### Available Environment Variables
-
-  * PHP\_MEMORY\_LIMIT : Set the memory limit (default 1024M)
-  * PHP\_TIMEZONE : Set the date.timezone (default UTC)

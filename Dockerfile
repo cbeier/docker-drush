@@ -11,5 +11,4 @@ RUN ln -sf $COMPOSER_HOME/vendor/bin/drush.php /usr/local/bin/drush
 RUN drush --version
 
 # Set up the command arguments
-CMD ["-"]
 ENTRYPOINT ["drush"]
